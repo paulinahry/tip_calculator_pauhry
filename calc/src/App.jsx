@@ -1,23 +1,14 @@
 import './index.css'
-import IceIceBaby from './assets/img/73713_22_11_16_08_43_17.png'
-
-//material UI
-import {Slider} from '@mui/material'
-
 //ICONS
 import {AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
-
-
-
-
+// STATES
 import { useState } from 'react'
 
 
 
 function App() {
 
-
-  //states
+  //STATES
   const [bill, setBill] = useState(0)
   const [counter, setCounter] = useState(1) // counter
   const [tip, setTip] = useState(0)  
@@ -78,15 +69,9 @@ function App() {
           <span className="ml-[10%]">€ {tipTotal.toFixed(2)}</span>
           </div>
 
-         <Slider
-          onChange={(e)=>setTip(e.target.value)}
-          aria-label="tip"
-          defaultValue={10}
-          // getAriaValueText={valuetext}
-          // valueLabelDisplay="auto"
-          step={5}
-          max={100}
-        /> 
+ 
+          <input type="range" className='tip-range-slider' min={0} max={100} defaultValue={10}  value={tip}
+            onChange={(e)=>setTip(e.target.value)} />
         </div>
 
         <div className="flex justify-center item-baseline gap-2 p-2">
@@ -108,8 +93,6 @@ function App() {
         </div>
 
        
-        {/* <input type="range" className='tip-range-slider' min={0} max={100} defaultValue={10}  value={tip}
-          onChange={(e)=>setTip(e.target.value)} /> */}
 
         <div className="bg-green-100 m-4 rounded-xl flex text-center justify-center flex-col">
           <div>
