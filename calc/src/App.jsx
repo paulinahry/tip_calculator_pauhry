@@ -39,10 +39,10 @@ function App() {
  
 
   return (
-    <section className="App bg-[url('./assets/img/wave.svg')] bg-no-repeat flex justify-center md:w-[60%] sm:w-[80%] lg:w-[40%] 2xl:w-[20%] mx-auto md:mt-6 bg-slate-100" >
+    <section className="App p-20 bg-[url('./assets/img/wave.svg')] bg-cover bg-no-repeat flex justify-center md:w-[60%] sm:w-[80%] lg:w-[40%] 2xl:w-[20%] mx-auto md:mt-6" >
    
 
-    <div className=" flex justify-center flex-col md:mx-auto " >
+    <div className=" flex justify-center flex-col md:mx-auto bg-neutral-50/50" >
 
       
         <h1 className='text-4xl md:text-5xl text-darky-green tracking-wide text-center mt-2 font-macherie font-bold italic'>Tipsy</h1>
@@ -66,24 +66,23 @@ function App() {
 
         {/* TIP SLIDER */}
         <section className='flex text-center justify-center flex-col p-2 m-4 w- mx-auto w-[80%]' >
-          <span className=' text-gray-500 text-left ml-8'>Choose tip* </span>
+          <span className=' text-gray-500 text-left ml-9'>Choose tip* </span>
 
           <div>
           <span>{tip}%</span>
           <span className="ml-[10%]">€ {tipTotal.toFixed(2)}</span>
           </div>
 
- 
           <input type="range" 
-          className='text-darky-green  bg-gray-200'
-          min={0} max={100} defaultValue={10}  value={tip}
+            className='text-darky-green  bg-gray-200'
+            min={0} max={100} defaultValue={10}  value={tip}
             onChange={(e)=>setTip(e.target.value)} />
         </section>
 
 
         {/* SPLIT */}
         <section className="flex justify-center flex-col text-center item-baseline gap-2 p-2 w-full mx-auto">
-          <span className='px-2 text-gray-500 text-left ml-16' >Split: </span>
+          <span className=' text-gray-500 text-left ml-16 px-3' >Split: </span>
           <div>
             <button 
             onClick={handleDecrement}>
