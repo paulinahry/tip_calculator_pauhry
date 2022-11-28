@@ -39,7 +39,7 @@ function App() {
  
 
   return (
-    <section className="App p-20 bg-[url('./assets/img/wave.svg')] bg-cover bg-no-repeat flex justify-center md:w-[60%] sm:w-[80%] lg:w-[40%] 2xl:w-[20%] mx-auto md:mt-6 rounded-xl" >
+    <section className="App p-20 bg-[url('./assets/img/wave.svg')] bg-cover bg-no-repeat flex justify-center md:w-[60%] sm:w-[80%] lg:w-[40%] 2xl:w-[20%] mx-auto md:mt-6" >
    
 
     <div className=" flex justify-center flex-col md:mx-auto bg-neutral-50/50 rounded-xl" >
@@ -110,7 +110,6 @@ function App() {
 
 
           <div className='flex justify-around'>
-
             <div>
               <p className=' text-gray-500'>bill:</p>
               <span>€{toPay.toFixed(2)}</span>
@@ -120,8 +119,8 @@ function App() {
               <p className=' text-gray-500'>tip:</p>
               <span>€{tipProPerson.toFixed(2)}</span> 
             </div>
-
           </div>
+
         </section>
                                                                                                 
         <p className='text-xs text-gray-400 p-2 mt-4'>* 10% recommended if everything was ok </p>
