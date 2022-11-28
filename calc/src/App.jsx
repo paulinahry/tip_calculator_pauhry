@@ -39,30 +39,34 @@ function App() {
  
 
   return (
-    <div className="flex justify-center bg-slate-50 md:w-[50%] md:mx-auto md:my-[10%]" >
+    <section className="App bg-[url('./assets/img/wave.svg')] bg-no-repeat flex justify-center md:w-[60%] sm:w-[80%] lg:w-[40%] 2xl:w-[20%] mx-auto md:mt-6 bg-slate-100" >
    
 
-      <div className="w-full flex justify-center flex-col bg-white/50 rounded-md
-      bg-[url('./assets/img/wave.svg')] bg-no-repeat " >
+    <div className=" flex justify-center flex-col md:mx-auto " >
 
       
-      <h1 className='text-2xl text-center mt-4'>Tipsy</h1>
-      
-        <div className="flex text-center justify-around mt-16" >
-          <span>Enter bill total </span>
+        <h1 className='text-4xl md:text-5xl text-darky-green tracking-wide text-center mt-2 font-macherie font-bold italic'>Tipsy</h1>
+
+
+        {/*ENTER BILL TOTAL   */}
+        <section className="flex text-center  flex-col mt-16 text-gray-500 mx-auto" >
+          <span className='text-left ml-20'>Enter bill total </span>
           <div>
-            <label htmlFor="billIpnut">€ </label>
+            <label htmlFor="billIpnut"
+            className='text-darky-green text-2xl'>€ </label>
             <input 
-            className=' w-[30%] border-b-2 outline-none '
+            className=' w-[30%] border-b-2 outline-none text-2xl text-darky-green '
             type="number" 
             placeholder='0.00'
             id='billIpnut'
             onChange={(e) => setBill(e.target.value)} />
           </div>
-        </div>
+        </section>
 
-        <div className='flex text-center justify-center flex-col p-2 m-2' >
-          <span>Choose tip </span>
+
+        {/* TIP SLIDER */}
+        <section className='flex text-center justify-center flex-col p-2 m-4 w- mx-auto w-[80%]' >
+          <span className=' text-gray-500 text-left ml-8'>Choose tip* </span>
 
           <div>
           <span>{tip}%</span>
@@ -70,54 +74,60 @@ function App() {
           </div>
 
  
-          <input type="range" className='tip-range-slider' min={0} max={100} defaultValue={10}  value={tip}
+          <input type="range" 
+          className='text-darky-green  bg-gray-200'
+          min={0} max={100} defaultValue={10}  value={tip}
             onChange={(e)=>setTip(e.target.value)} />
-        </div>
+        </section>
 
-        <div className="flex justify-center item-baseline gap-2 p-2">
-          <span className='px-2'>Split: </span>
-          <div >
+
+        {/* SPLIT */}
+        <section className="flex justify-center flex-col text-center item-baseline gap-2 p-2 w-full mx-auto">
+          <span className='px-2 text-gray-500 text-left ml-16' >Split: </span>
+          <div>
             <button 
             onClick={handleDecrement}>
-            {<AiOutlineMinus />}
+            {<AiOutlineMinus size={25}/>}
             </button>
 
-            <span className='text-xl'>{counter}</span>
+            <span className='text-4xl m-0.5'>{counter}</span>
 
             <button 
             onClick={handleIncrement}>
-            {<AiOutlinePlus  />}
+            {<AiOutlinePlus  size={25}/>}
             </button>
           </div>
 
-        </div>
+        </section>
 
-       
 
-        <div className="bg-green-100 m-4 rounded-xl flex text-center justify-center flex-col">
+        {/* RESULTS CALCULATIONS - GREEN BOX */}
+        <section className="bg-green-200 m-4 p-4 w-[50%] rounded-xl flex text-center justify-center  flex-col mx-auto text-darky-green">
+
           <div>
-          <p>Total per person :</p>
-          <span className='text-3xl'>€{toPayProPerson.toFixed(2)}</span>
+            <p className=' text-gray-500'>Total per person :</p>
+            <span className='text-3xl'>€{toPayProPerson.toFixed(2)}</span>
           </div>
 
 
           <div className='flex justify-around'>
+
             <div>
-              <p>bill:</p>
+              <p className=' text-gray-500'>bill:</p>
               <span>€{toPay.toFixed(2)}</span>
             </div>
 
             <div>
-              <p>tip</p>
+              <p className=' text-gray-500'>tip:</p>
               <span>€{tipProPerson.toFixed(2)}</span> 
             </div>
+
           </div>
-
-         
-
-        </div>
+        </section>
+                                                                                                
+        <p className='text-xs text-gray-400 p-2 mt-4'>* 10% recommended if everything was ok </p>
       </div>
-    </div>
+    </section>
   )
 }
 

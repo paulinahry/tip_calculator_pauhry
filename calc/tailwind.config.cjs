@@ -5,7 +5,15 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        macherie: "macherie",
+      },
+      colors: {
+        'darky-green' : '#052939'
+
+      }
+    },
   },
   plugins: [],
 }
