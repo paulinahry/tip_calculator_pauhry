@@ -39,10 +39,10 @@ function App() {
  
 
   return (
-    <section className="App p-20 bg-[url('./assets/img/wave.svg')] bg-cover bg-no-repeat flex justify-center md:w-[60%] sm:w-[80%] lg:w-[40%] 2xl:w-[20%] mx-auto md:mt-6" >
+    <section className="App p-20 bg-[url('./assets/img/wave.svg')] bg-cover bg-no-repeat flex justify-center md:w-[60%] sm:w-[80%] lg:w-[40%] 2xl:w-[20%] mx-auto md:mt-6 rounded-xl" >
    
 
-    <div className=" flex justify-center flex-col md:mx-auto bg-neutral-50/50" >
+    <div className=" flex justify-center flex-col md:mx-auto bg-neutral-50/50 rounded-xl" >
 
       
         <h1 className='text-4xl md:text-5xl text-darky-green tracking-wide text-center mt-2 font-macherie font-bold italic'>Tipsy</h1>
