@@ -11,7 +11,7 @@ function App() {
   //STATES
   const [bill, setBill] = useState(0)
   const [counter, setCounter] = useState(1) // counter
-  const [tip, setTip] = useState(0)  
+  const [tip, setTip] = useState(10)  
 
 
   //CONSTANCES
@@ -19,16 +19,12 @@ function App() {
   const tipProPerson = tipTotal / counter
   const toPay = Number(bill) + Number(tipTotal)
   const toPayProPerson =  ( bill/counter ) + tipProPerson
+  const billProPerson = bill / counter
     
 
   //Check splitting  
   function handleDecrement(){
-    if(counter > 0){
-      setCounter(counter-1)
-      console.log('minus')
-    }else{
-      setCounter(0)
-    }
+    setCounter(Math.max(1, counter - 1))
   }
 
   function handleIncrement(){
@@ -112,12 +108,16 @@ function App() {
 
           <div className='flex justify-around'>
             <div>
-              <p className=' text-gray-500'>bill:</p>
-              <span>{toPay.toFixed(2)}</span>
+              <p className=' text-gray-500'>
+                bill:
+                </p>
+              <span>{billProPerson.toFixed(2)}</span>
             </div>
 
             <div>
-              <p className=' text-gray-500'>tip:</p>
+              <p className=' text-gray-500'>
+                tip:
+                </p>
               <span>{tipProPerson.toFixed(2)}</span> 
             </div>
           </div>
