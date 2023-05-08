@@ -25,7 +25,7 @@ function App() {
   function handleDecrement(){
     if(counter > 0){
       setCounter(counter-1)
-      console.log('minus');
+      console.log('minus')
     }else{
       setCounter(0)
     }
@@ -33,13 +33,13 @@ function App() {
 
   function handleIncrement(){
     setCounter(counter+1)
-    console.log('plus');
+    console.log('plus')
   }
 
  
 
   return (
-    <section className="App p-20 bg-[url('./assets/img/wave.svg')] bg-cover bg-no-repeat flex justify-center md:w-[60%] sm:w-[80%] lg:w-[40%] 2xl:w-[20%] mx-auto md:mt-6" >
+    <section className="App p-8 bg-[url('./assets/img/wave.svg')] bg-cover bg-no-repeat flex justify-center md:w-[60%] sm:w-[80%] lg:w-[40%] 2xl:w-[20%] mx-auto md:mt-6" >
    
 
     <div className=" flex justify-center flex-col md:mx-auto bg-neutral-50/50 rounded-xl" >
@@ -53,7 +53,7 @@ function App() {
           <span className='text-left ml-20'>Enter bill total </span>
           <div>
             <label htmlFor="billIpnut"
-            className='text-darky-green text-2xl'>€ </label>
+            className='text-darky-green text-2xl'></label>
             <input 
             className=' w-[30%] border-b-2 outline-none text-2xl text-darky-green '
             type="number" 
@@ -68,9 +68,10 @@ function App() {
         <section className='flex text-center justify-center flex-col p-2 m-4 w- mx-auto w-[80%]' >
           <span className=' text-gray-500 text-left ml-9'>Choose tip* </span>
 
-          <div>
+          <div className=' text-center'>
           <span>{tip}%</span>
-          <span className="ml-[10%]">€ {tipTotal.toFixed(2)}</span>
+          <span className='mx-2'> =</span>
+          <span >{tipTotal.toFixed(2)}</span>
           </div>
 
           <input type="range" 
@@ -101,23 +102,23 @@ function App() {
 
 
         {/* RESULTS CALCULATIONS - GREEN BOX */}
-        <section className="bg-green-200 m-4 p-4 w-[50%] rounded-xl flex text-center justify-center  flex-col mx-auto text-darky-green">
+        <section className="bg-green-200 m-4 p-4 w-[75%] rounded-xl flex text-center justify-center  flex-col mx-auto text-darky-green">
 
           <div>
             <p className=' text-gray-500'>Total per person :</p>
-            <span className='text-3xl'>€{toPayProPerson.toFixed(2)}</span>
+            <span className='text-3xl'>{toPayProPerson.toFixed(2)}</span>
           </div>
 
 
           <div className='flex justify-around'>
             <div>
               <p className=' text-gray-500'>bill:</p>
-              <span>€{toPay.toFixed(2)}</span>
+              <span>{toPay.toFixed(2)}</span>
             </div>
 
             <div>
               <p className=' text-gray-500'>tip:</p>
-              <span>€{tipProPerson.toFixed(2)}</span> 
+              <span>{tipProPerson.toFixed(2)}</span> 
             </div>
           </div>
 
