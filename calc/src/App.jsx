@@ -35,7 +35,14 @@ function App() {
  
 
   return (
-    <section className="App p-8 bg-[url('./assets/img/wave.svg')] bg-cover bg-no-repeat flex justify-center md:w-[60%] sm:w-[80%] lg:w-[40%] 2xl:w-[20%] mx-auto md:mt-6" >
+    <section className="App p-8 
+    bg-[url('./assets/img/wave.svg')] bg-cover  bg-no-repeat 
+    border border-gray-300 rounded-md  flex justify-center 
+    md:w-[60%] 
+    sm:w-[80%] 
+    lg:w-[40%] 
+    2xl:w-[20%] 
+    mx-auto md:mt-6" >
    
 
     <div className=" flex justify-center flex-col md:mx-auto bg-neutral-50/50 rounded-xl" >
